@@ -47,9 +47,9 @@ const Home = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } z-50 absolute top-[40%] border `}
+        } z-50 absolute top-[40%] border w-full flex justify-center`}
       >
-        <Modal />
+        <Modal isVisible={isOpen} onClose={() => setOpen(false)} />
       </div>
     </div>
   );
