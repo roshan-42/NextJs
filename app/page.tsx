@@ -5,14 +5,17 @@ import Hero from "./components/Modal/Hero";
 import Mainfilemodal from "./components/1. Latest/Mainfilemodal";
 import Mainfile from "./components/1. Latest/Mainfile";
 import Todo from "./components/2. ToDo practice/Todo";
+import Products from "./components/Cart/Products";
+import Main from "./components/Cart/Main";
 export default function Page() {
   return (
     <div>
       {/* <Home /> */}
       {/* <Try /> */}
       {/* <Hero /> */}
-      <Mainfile />
-      <Todo />
+      {/* <Mainfile />
+      <Todo /> */}
+      <Main />
     </div>
   );
 }
