@@ -1,12 +1,18 @@
 import { RootState } from "@/Store/Store";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "@/Store/Slices/Counter";
 
 const Products = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
+  const count: Number = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
+
+  localStorage.setItem("count", JSON.stringify(0));
+
+  useEffect(() => {
+    localStorage.setItem("count", JSON.stringify(count));
+  }, [count]);
 
   const Products = [
     {

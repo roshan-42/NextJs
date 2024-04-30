@@ -8,7 +8,9 @@ const initialState: counter = {
   //     typeof window !== "undefined" && localStorage.getItem("items")
   //       ? Number(localStorage.getItem("items"))
   //       : 0,
-  value: Number(0),
+  value: localStorage.getItem("count")
+    ? Number(localStorage.getItem("count"))
+    : 0,
 };
 const CounterSlice = createSlice({
   name: "counter",
