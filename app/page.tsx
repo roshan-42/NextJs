@@ -5,8 +5,8 @@ import Hero from "./components/Modal/Hero";
 import Mainfilemodal from "./components/1. Latest/Mainfilemodal";
 import Mainfile from "./components/1. Latest/Mainfile";
 import Todo from "./components/2. ToDo practice/Todo";
-import Products from "./components/Cart/Products";
-import Main from "./components/Cart/Main";
+import Products from "./components/Ecommerce/Products";
+
 export default function Page() {
   return (
     <div>
@@ -15,7 +15,7 @@ export default function Page() {
       {/* <Hero /> */}
       {/* <Mainfile />
       <Todo /> */}
-      <Main />
+      <Products />
     </div>
   );
 }

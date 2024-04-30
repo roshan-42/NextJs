@@ -1,10 +1,11 @@
 import React from "react";
-import Cart from "../components/Cart/Cart";
+import Cart from "@/app/components/Ecommerce/Cart";
 
 const Page = () => {
   return (
     <div>
       <Cart />
+      {/* <Ecommerce /> */}
     </div>
   );
 };

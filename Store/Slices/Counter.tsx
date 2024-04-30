@@ -21,7 +21,7 @@ const CounterSlice = createSlice({
       state.value = state.value + 1;
     },
     decrement: (state: Record<string, any>) => {
-      state.value = state.value + 1;
+      state.value = state.value - 1;
     },
     incrementByAmount: (
       state: Record<string, any>,
