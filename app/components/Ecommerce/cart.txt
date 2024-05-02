@@ -1,0 +1,68 @@
+"use client";
+import { unique } from "next/dist/build/utils";
+import React, { useState } from "react";
+
+const Cart = () => {
+  // const [cartItems, setcartItems] = useState([]);
+
+  // let product_dataJSON = localStorage.getItem("products");
+  // let product_data = product_dataJSON ? JSON.parse(product_dataJSON) : "";
+
+  // console.log(product_data);
+  // //   ====================== Redundent data fix=========================
+  // const removeRedundantData = () => {
+  //   let uniqueItems = [];
+  //   product_data.map((item, index) => {
+  //     const existingItem = uniqueItems.find((uItem) => uItem.id === item.id);
+  //     if (!existingItem) {
+  //       uniqueItems.push(item);
+  //     }
+  //   });
+  //   return uniqueItems;
+  // };
+  // // ======================To find item quantity======================
+  // let item_quantity = (item_id) => {
+  //   return product_data.filter((item) => item.id == item_id).length;
+  // };
+  // console.log("Item_quantity_________", item_quantity);
+
+  // // ================To Remove same items====================
+  // const removeItem = (itemID) => {
+  //   const updatedItems = product_data.filter((item) => item.id !== itemID);
+  //   localStorage.setItem("products", JSON.stringify(updatedItems));
+  //   console.log("updatedItems________________", updatedItems);
+
+  //   console.log("Setitems___________________", setItems);
+  // };
+
+  return (
+    <div className="bg-white h-screen flex items-center justify-center">
+      <div className="w-[40%]">
+        <p>Cart Items:</p>
+        <div className=" shadow-md flex flex-wrap gap-10">
+          {cartItems.map((item, index) => (
+            <div className="bg-white shadow-lg p-5 px-10" key={index}>
+              <div className="flex">
+                <p>Product Name:</p>
+                <span>{item.name} </span>
+                <div>Quantity: {item_quantity(item.id)}</div>
+              </div>
+              <p>
+                Price:<span>{item.price} </span>
+              </p>
+              <button
+                onClick={() => removeItem(item.id)}
+                className="bg-red-400 px-5 rounded-lg"
+              >
+                {" "}
+                Remove
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Cart;
