@@ -9,6 +9,7 @@ const TodoApi = () => {
   const [storeID, setStoreID] = useState(0);
   const [description, setDescription] = useState("");
 
+  //   ===========================Get request using SWR============================
   const { data, error, mutate } = useSWR(
     "http://127.0.0.1:8000/todo/",
     fetcher

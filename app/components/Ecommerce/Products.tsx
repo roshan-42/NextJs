@@ -1,6 +1,9 @@
 "use client";
 import { stringify } from "querystring";
 import React from "react";
+import useSWR from "swr";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Products = () => {
   const product_list = [
@@ -33,6 +36,12 @@ const Products = () => {
 
     localStorage.setItem("products", JSON.stringify(initialData));
   };
+
+  const { data, error } = useSWR("https://fakestoreapi.com/products", fetcher);
+  console.log("data___________________", data);
+  if (error) return <div>Failed to load</div>;
+  if (!data) return <div>Loading...</div>;
+
   return (
     <div className="bg-white h-screen flex items-center justify-center">
       <div className="flex gap-5">

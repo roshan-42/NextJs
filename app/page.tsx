@@ -8,6 +8,7 @@ import Mainfile from "./components/1. Latest/Mainfile";
 import Todo from "./components/2. ToDo practice/Todo";
 import Products from "./components/Ecommerce/Products";
 import TodoApi from "./components/3. todoAPi/TodoApi";
+import EcommerceAPI from "./components/EcommercewithAPI/EcommerceAPI";
 
 export default function Page() {
   return (
@@ -16,9 +17,11 @@ export default function Page() {
       {/* <Try /> */}
       {/* <Hero /> */}
       {/* <Mainfile />
+      ================================
       <Todo /> */}
-      <Products />
-      <TodoApi />
+      {/* <Products /> */}
+      {/* <TodoApi /> */}
+      <EcommerceAPI />
     </div>
   );
 }
