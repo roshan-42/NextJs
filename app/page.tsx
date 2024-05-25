@@ -9,6 +9,8 @@ import Todo from "./components/2. ToDo practice/Todo";
 import Products from "./components/Ecommerce/Products";
 import TodoApi from "./components/3. todoAPi/TodoApi";
 import EcommerceAPI from "./components/EcommercewithAPI/EcommerceAPI";
+import Inbox from "./components/ReuseableComponents/Inbox";
+import This from "./components/ReuseableComponents/This";
 
 export default function Page() {
   return (
@@ -21,7 +23,10 @@ export default function Page() {
       <Todo /> */}
       {/* <Products /> */}
       {/* <TodoApi /> */}
-      <EcommerceAPI />
+      {/* <EcommerceAPI /> */}
+      <This />
+
+      <Inbox />
     </div>
   );
 }

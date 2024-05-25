@@ -26,7 +26,7 @@ const EcommerceAPI = () => {
       <Navbar />
       <div className="h-screen flex flex-col items-center justify-center  p-5">
         <div className="flex flex-wrap gap-5 ">
-          {data?.map((item, index) => (
+          {data?.map((item: any, index) => (
             <div className=" shadow-xl p-2">
               <div>
                 <div className="h-48 w-48  relative">

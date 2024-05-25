@@ -2,6 +2,7 @@
 import { stringify } from "querystring";
 import React from "react";
 import useSWR from "swr";
+import Inbox from "../ReuseableComponents/Inbox";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
